@@ -15,13 +15,14 @@
 * git config --global user.email "youremail@gmail.com"
 
 # Github Clone of Repository
-* git clone https://github.com/injecti0n/WebDevClass {example}
+* git clone https://github.com/username/Repositoryname {example}
 
 # Github push project to repo
 * git init
 * git add *
 * git commit -m "commitMessage"
-* git add remote origin https://github.com/injecti0n/WebDevClass
+* git branch -M master
+* git add remote origin https://github.com/username/YourRepository.git
 * git push -u origin master
 
 # Github Update of Repo
