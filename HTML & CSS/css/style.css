@@ -1,0 +1,20 @@
+body {
+    background-color:white;
+}
+p {
+    color:red !important;
+}
+
+th,td {
+    border:1px dashed red
+}
+
+ul{
+    display: inline-flex;
+    list-style:none;
+  
+}
+li{
+    padding-right:4px
+}
+
