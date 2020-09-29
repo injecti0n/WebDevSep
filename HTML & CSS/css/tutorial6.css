@@ -1,0 +1,33 @@
+header {
+    height: 20%;
+    background-color: silver;
+    padding: 1.5rem;
+}
+
+header img {
+    width: 3vw;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+ul li {
+    margin-right: 1rem
+}
+
+ul li:hover{
+    color:red;
+}
+
+article {
+    padding: 2rem;
+    background-color: cadetblue;
+    color: white;
+}
+
+footer {
+    background-color: #d3e6e6;
+    padding: 1rem;
+}
