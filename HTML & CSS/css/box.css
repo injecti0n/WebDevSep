@@ -9,3 +9,21 @@ div p {
     background-color: whitesmoke;
     padding: 10px;
 }
+
+p#test {
+    width: 29%;
+    height: 15%;
+    overflow: hidden;
+    border-style: dotted;
+    visibility: visible;
+    border-image: url(https://www.tomswallpapers.com/images/201507/tomswallpapers.com_28604.jpg) 11 11 round;
+    border-width: 7px;
+    -webkit-box-shadow: 11px 8px 5px 0px rgba(0, 0, 0, 0.47);
+    box-shadow: 11px 8px 5px 0px rgba(0, 0, 0, 0.47);
+}
+
+h2 {
+    border-left-style: solid;
+    border-color: red;
+    border-width: 5px;
+}
