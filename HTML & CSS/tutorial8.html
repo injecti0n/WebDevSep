@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost/postdata.php" method="POST">
+        <fieldset>
+            <legend>USER LOGIN SECTION</legend>
+        <input type="text" placeholder="enter username" id="username" name="username" required><br/>
+        <input type="password" placeholder="enter password" id="password" name="password"><br/>
+        <label role="city">City:</label>
+        <select>
+            <option value="Brussels">Brussels</option>
+            <option value="Aalst">Aalst</option>
+        </select><br/>
+        <label for="role">Permission:</label>
+        <select>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+        </select><br/>
+        
+        <input type="hidden" id="process" name="process" value="1">
+        <input type="submit" value="Send this data to server">
+        
+    </fieldset>
+    </form>
+</body>
+</html>

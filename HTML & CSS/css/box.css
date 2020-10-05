@@ -1,0 +1,11 @@
+div {
+    background-color: burlywood;
+    width: 500px;
+    height: 350px;
+    padding: 10px;
+}
+
+div p {
+    background-color: whitesmoke;
+    padding: 10px;
+}
