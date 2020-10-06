@@ -1,0 +1,46 @@
+.box {
+    width: 300px;
+    height: 300px;
+}
+
+.news {
+    padding: 24px;
+    border: 1px solid;
+    overflow: auto;
+}
+
+.news img {
+    float:right;
+}
+
+.box img {
+    object-fit: cover;
+}
+
+div#block-1 {
+    background-color: black;
+    position: fixed;
+    top: 10%;
+    right: 50%;
+}
+div#block-2 {
+    background-color: red;
+    position: absolute;
+}
+
+span{
+    font-size:2rem;
+}
+
+div#inline-block {
+    position: relative;
+    left: 10%;
+    top: 10%;
+    background-color: yellow;
+}
+
+
+div#threecolumn {
+    column-count: 3;
+    column-rule-style: double;
+}

@@ -1,0 +1,14 @@
+div#media {
+    width: 100%;
+    height: 88vh;
+    background-image: url(https://images4.alphacoders.com/936/thumb-1920-936378.jpg);
+}
+
+@media screen and (max-width:950px) {
+    div#media {
+        width: 100%;
+        height: 300px;
+        background-image: url(https://w3wallpapers.net/wp-content/uploads/2020/03/Joker-Laptop-Wallpaper-1024x576.jpg);
+    }
+}
+
