@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    padding: 2%;
+    background-color: burlywood;
+    margin: 1px;
+    font-size: xx-large;
+    text-align: center;
+}

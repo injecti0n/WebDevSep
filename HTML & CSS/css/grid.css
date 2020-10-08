@@ -1,0 +1,20 @@
+body {
+    margin:0;
+}
+.grid-container {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.grid-item {
+    background-color: yellowgreen;
+    margin: 1px;
+    padding: 10%;
+}
+
+@media (max-width:600px){
+    .grid-container {
+        display:grid;
+        grid-auto-flow:row !important;
+    }
+}
