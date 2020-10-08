@@ -1,0 +1,12 @@
+body {
+    margin:0 !important;
+}
+
+.container-fluid{
+    padding:0 !important;
+}
+
+.row{
+    margin-right:0px !important;
+    margin-left:0px !important;
+}

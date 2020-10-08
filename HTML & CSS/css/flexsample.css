@@ -1,0 +1,24 @@
+body{
+    margin:0;
+}
+.box {
+    background-color: cornflowerblue;
+    margin: 1px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: xx-large;
+    color: white;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+}
+
+@media (max-width:600px){
+    .container{
+        display:flex;
+        flex-direction: column;
+    }
+}
