@@ -1,0 +1,11 @@
+body{
+    margin:0 !important;
+}
+
+/* selected img tagname */
+.col-12 img {
+    height: 70vh;
+    object-fit: cover;
+    width: 100%;
+}
+/* selected img tagname */

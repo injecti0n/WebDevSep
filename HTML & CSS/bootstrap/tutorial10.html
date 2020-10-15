@@ -26,23 +26,61 @@
         </div>
         <hr>
         <div class="row">
+            <!-- COL START -->
             <div class="col-12 p-3">
-                <form>
-                    <div class="form-group">
-                        <label for="username"> username:</label>
-                        <input type="text" class="form-control bg-dark text-white" placeholder="enter your username" />
-                    </div>
-                    <div class="form-group">
-                        <label for="password"> password:</label>
-                        <input type="password" class="form-control bg-warning text-dark"
-                            placeholder="enter your password" />
-                    </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button>
+            </div>
+            <!-- COL END -->
 
-                    <button class="btn btn-primary">Login</button>
-                    <button class="btn btn-danger">Register</button>
-                </form>
+
+        </div>
+
+
+        <!-- MODAL START -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">USER AUTH/ LOGIN</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- FORM -->
+                        <form>
+                            <div class="form-group">
+                                <label for="username"> username:</label>
+                                <input type="text" class="form-control bg-dark text-white"
+                                    placeholder="enter your username" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password"> password:</label>
+                                <input type="password" class="form-control bg-warning text-dark"
+                                    placeholder="enter your password" />
+                            </div>
+
+                            <button class="btn btn-primary">Login</button>
+                            <button class="btn btn-danger">Register</button>
+                        </form>
+                        <!-- FORM END -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+        <!-- MODEL END -->
 
     </div>
 
