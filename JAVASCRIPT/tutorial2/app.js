@@ -71,3 +71,5 @@ const NewVariable= 'This is static variable'
 // NewVariable = "update it!"
 // const NewVariable = "This is not static?"
 console.log(NewVariable)
+
+
