@@ -28,10 +28,10 @@ var jack = 16;
 // }
 
 
-result = jack != 25; 
+result = jack != 25;
 
 
-var string1 = "intec", string2="brussel";
+var string1 = "intec", string2 = "brussel";
 
 result = string1 !== string2;
 
@@ -62,7 +62,7 @@ console.log(result);
 
 // variablename = (condition) ? value1:value2
 
-result = (jack<18) ? 'He is a kid':'He is a young boy';
+result = (jack < 18) ? 'He is a kid' : 'He is a young boy';
 console.log(result)
 /*
 (jack<18) > condition
@@ -74,9 +74,74 @@ second return when condition return false
 
 
 var productStock = 0;
-var alert="Out of stock",success="Still available";
-var cart = (productStock < 1) ? alert:success;
+var alert = "Out of stock", success = "Still available";
+var cart = (productStock < 1) ? alert : success;
 console.log(cart)
 
 
 // student lowest score: 50
+
+var fail = "Student failed with the exam", success = "Student passed the exam", lowScore = 50, studentScore=45; // variables
+
+var testResult = (studentScore <=lowScore) ? fail:success; // ternary operator
+
+console.log(testResult) // result
+// end of task
+
+/*
+
+&&	logical and
+||	logical or
+!	logical not
+*/
+
+var myNewNumber =10;
+var result = (myNewNumber<11) && (myNewNumber>12) ? true:false;
+console.log(result)
+
+// true false = false
+// false false = false
+// true true = true
+
+
+result = (myNewNumber<11) || (myNewNumber>29) ? "true":"false";
+console.log(result)
+
+// console.log(!true)
+
+// result = (myNewNumber<11) || (myNewNumber>12) ? true:false;
+// console.log(result,"logical not operator")
+
+// Data Type: Object
+
+var student = {
+    name:"Priya",
+    jobtitle:"Web Developer",
+    age:26,
+    printIt: function(){
+        console.log('hello function')
+    },
+    isStudent:true 
+}
+
+console.log(student.name,student.jobtitle)
+student.printIt();
+console.log(student.isStudent)
+console.log(student)
+
+
+// auto models
+
+let auto = {
+    model: "BMW",
+    year: "2005"
+}
+
+console.log(auto)
+console.log(auto.model)
+
+
+document.write("Auto Model is " + auto.model + "<br>")
+document.write("Auto year " + auto.year)
+
+
