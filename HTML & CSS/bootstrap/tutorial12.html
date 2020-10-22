@@ -13,16 +13,39 @@
     <style>
         body {
             margin: 0 !important;
+
+        }
+
+        .container-fluid {
+            padding: 0px !important;
+        }
+
+        img.d-block.w-100 {
+            height: 30vh;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom navbar-fixed-top">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" width="39px" class="img-fluid" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Blog</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
 
     <div class="container-fluid">
-
-
-
 
 
 
@@ -68,6 +91,27 @@
 
 
 
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-lg-8 col-md-8 col-sm-8 bg-primary p-5">
+                <div class="row">
+                    <div class="col-md-8 p-3 bg-warning">
+                        <span>First News with Image (big size)</span>
+                    </div>
+                    <div class="col-md-4 p-3 bg-danger">
+                        other news without image listing here.
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 bg-danger border-left p-5">
+                <div class="row">
+                    <div class="col-md-12 p-3 bg-warning">
+                        sidebar widgets
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
