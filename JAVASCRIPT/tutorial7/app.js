@@ -113,5 +113,3 @@ function testFunction(myParameterName){
 
 
 testFunction(personal);
-
-
