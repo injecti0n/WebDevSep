@@ -54,3 +54,18 @@ function decrement(){
     }
 }
 // end of counter
+
+
+function _user(){
+    console.log('hello user')
+}
+
+function admin(){
+    console.log('hello admin')
+}
+
+if('admin'=='admin'){
+    admin();
+}else{
+    _user();
+}
