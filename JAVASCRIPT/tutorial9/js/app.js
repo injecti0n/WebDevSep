@@ -29,7 +29,6 @@ console.log(result)
 // data flow javascript
 
 let student = {}
-
 function str1(param){
     return param;
 }
@@ -45,7 +44,23 @@ function str3(param){
 }
 
 function str4(param){
-    console.log(param)
+    return param;
 }
 
-str4(str3(str2(str1(student))));
+var result1 = str1(student);
+var result2 = str2(result1)
+var result3 = str3(result2)
+var printService = str4(result3);
+
+console.log(printService)
+
+
+// 3 function
+
+// function1 init object
+// function2 add properties (fullname,age,email)
+// function3 printerService print info in this function.
+
+// function3 collapse function2 collapse function
+// function3>function2>function1 > result
+
