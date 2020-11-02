@@ -1,0 +1,35 @@
+.main {
+    display: grid;
+    height: 400px;
+    /* grid-template-columns: repeat(4, 25%);
+    grid-column-gap: 10px; */
+    grid-template-columns: auto;
+    grid-template-rows: 25% 25% 25%;
+    grid-gap:1px;
+    grid-template-areas:
+        "video1 video2 ."
+        ". video3 video4"
+
+
+}
+
+.box {
+    background-color: yellowgreen;
+    margin:1px;
+}
+
+
+.video1{ 
+    grid-area:video1;
+}
+
+.video2 {
+    grid-area: video2;
+}
+
+.video3 {
+    grid-area:video3;
+}
+.video4 {
+    grid-area:video4;
+}
