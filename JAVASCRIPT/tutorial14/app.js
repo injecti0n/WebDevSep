@@ -124,6 +124,60 @@ function forEachFunction(val,index){ // callback function
 }
 
 
+/*
+method: unshift()
+    The unshift() method adds new items to the beginning of an array, and returns the new length.
+*/
+
+// difference between push and unshift
+myNumberArray.unshift(4000)
+myNumberArray.push(9000)
+// difference between push and unshift
+
+
+
+/*
+method: map()
+    The map() method creates a new array with the results of calling a function for every array element.
+*/
+
+function mapCallBackFunction(value,index,currentArr){
+    console.log(`index:${index} value:${value.fullname}`)
+}
+
+//myNumberArray.map(mapCallBackFunction)
+
+students.map(mapCallBackFunction)
+
+/*
+method: flat()
+    convert multidimensional arrays into single dimensional array
+*/
+
+let multidimensionalArr = [1,2,3,4,[5,6,7,8,[9,10]]]
+console.log(multidimensionalArr)
+let dimensional = multidimensionalArr.flat(Infinity)
+console.log(dimensional)
+
+
+/*
+method: filter()
+    The filter() method creates an array filled with all array elements that pass a test 
+*/
+
+function findNumberByInput(value){
+    return value >=30
+}
+
+function findOldPeople(obj){ 
+    return obj.age >=27
+}
+
+console.log(students.filter(findOldPeople),"filter obj")
+
+
+let filterResult=  myNumberArray.filter(findNumberByInput)
+console.log('filter result', filterResult)
 
 
 console.log(myNumberArray)
