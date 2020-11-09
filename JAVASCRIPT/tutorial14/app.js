@@ -1,5 +1,7 @@
 // ARRAY METHODS
 
+// const { check } = require("yargs");
+
 let myNumberArray = [1,2,3,4,5,67,77,88,44,33,34,56,5,4,99];
 let myStringArray = ["Comedy","Horror","Action","Thriller","Sci-Fi","Fantasy"];
 let students = [
@@ -183,3 +185,100 @@ console.log('filter result', filterResult)
 console.log(myNumberArray)
 console.log(myStringArray)
 console.log(students)
+
+/*
+method: sort()
+    The sort() method sorts the items of an array.
+*/
+
+myNumberArray.sort(function(a,b){return b-a});
+var strings= ['f','s','e','l','q','x']
+strings.sort();
+console.log(strings)
+console.log(myNumberArray)
+
+
+/*
+method: findIndex();
+    The findIndex() method returns the index of the first element in an array that pass a test (provided as a function).
+*/
+
+function findIndexByValue_negative(value){
+    return value >=10000
+}
+
+function findIndexByValue_positive(value){
+    return value >=60
+}
+
+let negative_result  = myNumberArray.findIndex(findIndexByValue_negative)
+let positive_result  = myNumberArray.findIndex(findIndexByValue_positive)
+console.log(`Negative:${negative_result}\nPositive:${positive_result}`)
+
+/*
+method: find()
+    The find() method returns the value of the first element in an array that pass a test
+*/
+
+let _students = [
+    {name:"Jack",age:25},
+    {name:"Mikail",age:27},
+    {name:"Priya",age:28}
+]
+
+function findStudent(student){
+    return student.name === "Priya"
+}
+
+let studentResult= _students.find(findStudent)
+
+console.log(studentResult)
+
+
+/*
+method: concat()
+    The concat() method is used to join two or more arrays.
+*/
+
+let oldArray= [1,2,3,4,5,'string']
+let newArray = [true,{hello:"world"}]
+let updatedArr = oldArray.concat(newArray);
+updatedArr = updatedArr.concat('Hello world!',34,45)
+console.log(updatedArr)
+
+/*
+method: fill();
+    Fill all the array elements with a static value
+*/
+myNumberArray = myNumberArray.fill('none')
+console.log(myNumberArray)
+
+/*
+method: includes();
+    This method returns true if the array contains the element, and false if not.
+*/
+
+myNumberArray = [1,2,3,4,5,67,77,88,44,33,34,56,5,4,99];
+
+let isNumberExist = myNumberArray.includes(77);
+
+console.log(isNumberExist)
+
+function checkNumber(obj,value){
+    let isExist = obj.includes(value);
+    if(isExist === false){
+        console.log('this number is not in array')
+    }else{
+        console.log('this number is in this array')
+    }
+}
+    checkNumber(myNumberArray,35);
+
+
+/*
+method: reverse();
+    The reverse() method reverses the order of the elements in an array.
+*/
+myNumberArray = myNumberArray.reverse();
+console.log(myNumberArray);
+
