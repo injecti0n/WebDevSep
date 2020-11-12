@@ -138,7 +138,49 @@ for(x=9;x<=10;x++){
 
     }
 
+}
 
 
+let NumbersinArray = []
+console.log("Before",NumbersinArray)
+for (let index = 0; index < 10; index++) {
+    
+    NumbersinArray.push(index)
+    
+}
 
+console.log("After",NumbersinArray)
+
+// for in loop
+
+let student = {
+    name:"Michael",
+    age:23,
+    profession:"Developer"
+}
+
+for(objName in student){ 
+    console.log(student[objName]) // property of values of obj
+}
+
+for(name in student){
+    console.log(`
+    AttributeName: ${name}
+    AttributeValue: ${student[name]}
+    `)
+}
+ 
+
+// for of loop
+// for/of lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.
+let WebDevClass = ['Priya','Susan','Lotte','Elnura','Mikail','Adnan','Emmanuel','Kobe','Arne','Yannick','Jotye','Oguz']
+
+for (let [index,student] of WebDevClass.entries()){
+    console.log(`${student}:${index}`)
+}
+
+let companyName = "INTECBRUSSEL"
+
+for(let letter of companyName){
+    console.log(letter)
 }
