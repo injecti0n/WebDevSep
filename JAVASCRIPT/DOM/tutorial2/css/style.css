@@ -1,0 +1,30 @@
+.tui-datepicker-input {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: auto !important;
+    vertical-align: top;
+    border: 0px solid #ddd !important;
+}
+
+.tui-datepicker-input > input {
+    display: block !important;
+    width: 100% !important;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #495057 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
+
+
+.tui-calendar th, .tui-calendar td {
+    height: 39px;
+    font-weight: 700;
+    text-align: center;
+    color: #999;
+}
