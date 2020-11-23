@@ -3,6 +3,7 @@ let todoInput = document.querySelector('#todo');
 let addTodoBtn = document.querySelector('button.btn.btn-danger'); // old button
 let todoForm = document.querySelector('#todo-form')
 let ListofTodos = document.querySelector('.list-group')
+let ClearTodos = document.querySelector('#clear-todos')
 let Output;
 
 
@@ -39,6 +40,26 @@ function addTodoToArray(todo) {
 
 }
 
+
+ListofTodos.addEventListener('click',function(e){
+    if(e.target.className === "fa fa-remove"){
+        console.log('remove action')
+        console.log(e.target.parentElement.parentElement)
+        e.target.parentElement.parentElement.remove();
+    }
+    e.preventDefault();
+})
+
+
+ClearTodos.addEventListener('click', function (e) {
+
+    console.log(ListofTodos.firstElementChild)
+    while (ListofTodos.firstElementChild != null) {
+        ListofTodos.removeChild(ListofTodos.firstElementChild)
+    }
+
+})
+
 function addTodo(event) {
     event.preventDefault();
     var li = document.createElement('li')
@@ -55,7 +76,7 @@ function addTodo(event) {
     ListofTodos.appendChild(li)
     console.log(todoInput.value)
     addTodoToArray(todoInput.value)
-    
+
 }
 
 addTodoBtn.addEventListener('click', addTodo)
