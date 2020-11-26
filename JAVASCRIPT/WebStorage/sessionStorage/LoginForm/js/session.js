@@ -1,37 +1,20 @@
-sessionkey = user
-sessionvalue = password
 
 
-sessionStorage.user='atilla'
-sessionStorage.pass='123456'
-/* session.js
-if user and pass not null
-    redirect: dashboard
-    if user-pass null is then
-        redirect:login
-*/
-/*
-login.js
-        if visitor doesnt have account
-            then click register
-            or
-            click login and create session into sessionStorage .user and .pass
-                if success redirect to: dashboard
-                if not ask again
-*/
+document.addEventListener('DOMContentLoaded',sessionCheck);
 
-/*
-register.js
-
-validate inputs empty 
-if not then create session here
-and redirect to dashboard auto
-
-*/
-
-/*
-dashboard
-print username from sessionstorage
-logout > clear sessions
-
-*/
+function sessionCheck() {
+    setTimeout(function(){
+        if (typeof (Storage) !== "undefined") { // is Storage available in browser?
+            if(sessionStorage.user !=null && sessionStorage.pass !=null){ //
+               // alert('An Account exist');
+               location.href='dashboard.html'
+            }else if(sessionStorage.user == null && sessionStorage.pass == null){
+             //   alert('register.html');
+                location.href='register.html';
+            }else{
+               // alert('login.html')
+               location.href='login.html';
+            }
+        }
+    },4000);
+}
