@@ -70,3 +70,70 @@ for (let [key,value] of DataCollection.entries()){
 console.log(DataCollection1)
 console.log(getResult)
 console.log(DataCollection)
+
+// Set
+
+
+/*
+
+new Set(iterable) – creates the set, and if an iterable object is provided (usually an array), copies values from it into the set.
+set.add(value) – adds a value, returns the set itself.
+set.delete(value) – removes the value, returns true if value existed at the moment of the call, otherwise false.
+set.has(value) – returns true if the value exists in the set, otherwise false.
+set.clear() – removes everything from the set.
+set.size – is the elements count.
+
+*/
+
+let SetCollection = new Set();
+
+
+SetCollection.add(100)
+SetCollection.add(100)
+SetCollection.add('intecbrussel')
+SetCollection.add('intecbrussel')
+SetCollection.add(true)
+SetCollection.add(true)
+SetCollection.add([55,66,77])
+SetCollection.add({x:1,y:2,z:3})
+
+let SetCollectionResult;
+// size method
+SetCollectionResult = SetCollection.size;
+
+
+SetCollectionResult = SetCollection.delete('intecbrusselx')
+
+// has  => isValueExist?
+SetCollectionResult = SetCollection.has(1000)
+
+// clear()
+//SetCollection.clear();
+
+// ForEach
+SetCollection.forEach(value =>console.log(value))
+
+
+
+// console.log("SetCollectionResult=> ",SetCollectionResult)
+// console.log(typeof SetCollection)
+ console.log(SetCollection)
+
+let iterator = SetCollection.values();
+
+console.log(iterator.next())
+console.log(iterator.next())
+console.log(iterator.next())
+console.log(iterator.next())
+console.log(iterator.next())
+console.log(iterator.next())
+console.log(SetCollection.values())
+
+
+// for(value of SetCollection){
+//     console.log(value)
+// }
+
+while(iterator.next().done !=true){ // 
+    console.log(iterator.next())
+}
