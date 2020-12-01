@@ -137,3 +137,9 @@ console.log(SetCollection.values())
 while(iterator.next().done !=true){ // 
     console.log(iterator.next())
 }
+
+
+/*
+Classes in ES5
+Classes in ES6
+*/
