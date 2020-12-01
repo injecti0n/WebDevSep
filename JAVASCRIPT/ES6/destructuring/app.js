@@ -93,3 +93,8 @@ const metaInfo = {
     },
     location:['Rouppeplein','Brussel']
 }
+
+//const {x}  = metaInfo
+const [straat,stad] = metaInfo.location 
+console.log(straat)
+
