@@ -31,6 +31,9 @@
 // })
 
 
+
+
+
 // Promises Chain ES6
 
 // getUser()
@@ -111,3 +114,44 @@ PromiseMe.then(res=>res).then(data=>{
         console.log(student)
     })
 })
+
+// fetch('https://jsonplaceholder.typicode.com/todos/')
+// .then(res=>res.json())
+// .then(res=>{
+//     console.log(res)
+// })
+
+
+let promise1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('First promise is done')
+    },1000)
+})
+
+let promise2 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Second promise is done')
+    },500)
+})
+
+let promise3 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Third promise is done')
+    },200)
+})
+
+// Promise.all
+Promise.all([promise1,promise2,promise3])
+.then(allAnswers=>{
+    console.log(allAnswers)
+}).catch(err=>{
+    console.error(err)
+})
+
+const myArr = [promise1,promise2,promise3]
+Promise.all(myArr)
+.then(allAnswers=>{
+    console.log(allAnswers)
+})
+
+//Promise.all([1,2,3,4,5,6,7,8])
