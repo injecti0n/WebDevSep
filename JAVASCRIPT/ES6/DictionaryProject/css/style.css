@@ -1,0 +1,10 @@
+audio{
+    height: 10%;
+}
+
+#play-pause-button{
+    font-size: 17px;
+    cursor: pointer;
+    color:blue;
+    
+  }

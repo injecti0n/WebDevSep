@@ -92,6 +92,7 @@ let printService = (string) => {
     })
 }
 
+
 printService('intecbrussel') // JSON data
     .then(() => printService('intecbrussel-1')) // formatting
     .then(() => printService('intecbrussel-2')) // res.slice(29)

@@ -6,21 +6,22 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="jumbotron bg-white">
         <div class="container" style="margin-bottom: 30px">
             <div>
-                <img src="img/logo.png"
+                <a href="index.html"><img src="img/logo.png"
                     style="margin: auto; max-width: 50%; width: 160px; display: block"
-                    alt="OwlBot is an english dictionary API" />
+                    alt="OwlBot is an english dictionary API" /></a>
             </div>
-
+            
             <div class="row">
                 <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 input-group" style="padding: 40px 0;">
                     <input type="text" name="word" class="form-control" id="search"
@@ -35,26 +36,23 @@
                     </button>
                 </div>
             </div>
-
-            <div class="row bg-warning">
-                <div class="col-sm-10 offset-sm-1 ui-box">
-                    <h3 class="word-text">pineapple</h3>
-                    <span class="pronunciation-text" style="color: #808080;">/ˈpīˌnapəl/</span>
-                    <div id="definitions-container">
-                        <div class="row" style="border-top: solid 1px #e6e6e6; padding: 10px 0">
-                            <div class="col-sm-9 my-auto"><i>noun<span class="d-inline-block tip" data-toggle="tooltip"
-                                        title="" tabindex="0" data-html="true" data-placement="right"
-                                        data-original-title="Nouns are one of the four major word classes, along with verbs, adjectives and adverbs. Nouns are the largest word class.<br>
-A noun refers to a person, animal, place or thing.
-<a href='#LINK' target='_blank'>Read more about nouns in Cambridge website.</a>">?</span></i><br>a
-                                large juicy tropical fruit consisting of aromatic edible yellow flesh surrounded by a
-                                tough segmented skin and topped with a tuft of stiff leaves.🍍<br><span
-                                    style="color: #808080; font-size: 14px;">"Watch <a
-                                        href="#VIDEO">this video</a> to learn how you can grow a
-                                    pineapple plant at home."</span></div>
-                            <div class="col-sm-3 text-right"><img
-                                    src="https://5.imimg.com/data5/WT/GN/ZH/SELLER-3722283/pineapple-500x500.jpg"
-                                    style="width: 110px; max-width: 100%; border-radius: 55px; border: solid 1px #dedede">
+            
+            <div class="jumbotronx bg-white p-0">
+                <div class="row bg-warning">
+                    <div class="col-sm-10 offset-sm-1 ui-box">
+                        <h3 class="word-text">${obj.word}</h3>
+                        <span class="pronunciation-text d-block mb-1" style="color: #808080;">${obj.phonetics[0].text}</span>
+                        
+                        <a id="play-pause-button" class="fa fa-play"></a>
+                        <div id="definitions-container">
+                            <div class="row" style="border-top: solid 1px #e6e6e6; padding: 10px 0">
+                                <div class="col-sm-9 my-auto definition"><i>noun</i><br>
+                                ${obj.meanings[1].definitions[0].definition}
+                                <hr>
+                                Example;<br> 
+                                ${obj.meanings[1].definitions[0].example}
+                                <br></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -62,6 +60,7 @@ A noun refers to a person, animal, place or thing.
             </div>
         </div>
         <!-- Optional JavaScript -->
+        <script src="js/app.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
