@@ -41,3 +41,11 @@ readInterface.on('line',(line)=>{
         console.log('Users List Extracted!')
     })
 })
+
+
+// 2 nodejs module for sum and division
+// import and use those modules in app.js
+const SumModule = require('./customModule/Sum')
+
+let result = SumModule(5,6);
+console.log(result)
