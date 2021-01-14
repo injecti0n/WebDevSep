@@ -1,0 +1,16 @@
+{
+  "name": "CommandLineApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "googleDork.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-it": "^1.6.0",
+    "yargs": "^16.2.0"
+  }
+}
