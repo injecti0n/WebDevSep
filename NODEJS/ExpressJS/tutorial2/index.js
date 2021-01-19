@@ -20,4 +20,6 @@ app.put('/',UpdateController);
 app.delete('/delete',DeleteController)
 
 
+
+
 app.listen(3002,()=>console.log('Server is running...'))
