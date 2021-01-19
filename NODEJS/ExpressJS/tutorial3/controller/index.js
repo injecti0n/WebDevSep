@@ -18,4 +18,23 @@ const apiController = (req,res)=>{
     })
 }
 
-module.exports = {homepageController,loginController,registerController,apiController}
+const UserController = (req,res)=>{
+    let username = req.query.username
+    console.log(username)
+    console.log('works')
+    console.log(req.body)
+    res.send(`Welcome ${username}`)
+}
+
+const singleUserController = (req,res)=>{
+    let userID = req.params.userid
+    console.log(userID)
+    res.send('Single User Profile section')
+}
+
+const postController = (req,res)=>{
+    console.log(req.params)
+    res.send('Post Section')
+}
+
+module.exports = {homepageController,loginController,registerController,apiController,UserController,singleUserController,postController}
