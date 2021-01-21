@@ -1,0 +1,21 @@
+<%- include ('partials/header') %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 bg-primary border text-warning p-5">
+            <h2> USER LIST </h2>
+            <ul>
+                <% last.forEach(function(user){ %>
+
+                <li>
+                    <a href=<%= 'users/'+user.id %>
+                    class="text-white">
+                        <%= user.name %>
+                    </a>
+                </li>
+
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>
+<%- include ('partials/footer') %>
