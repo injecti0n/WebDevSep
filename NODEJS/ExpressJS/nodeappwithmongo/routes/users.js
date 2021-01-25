@@ -10,7 +10,6 @@ router.get('/', getUsers);
 // post routers
 router.post('/',addUser)
 
-
 router.get('/:id',getUserById)
 
 
