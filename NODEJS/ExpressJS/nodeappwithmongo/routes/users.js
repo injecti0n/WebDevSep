@@ -1,39 +1,15 @@
 var express = require('express');
 var router = express.Router();
-const User = require('../models/User')
+
+const {getUsers,addUser} = require('./controllers/userController')
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  User.find({},(err,response)=>{
-    if(err){
-      res.json(err)
-    }else{
-      res.json(response)
-    }
-  })
-});
-
+router.get('/', getUsers);
 
 // post routers
-router.post('/user',(req,res)=>{
-  const newUser = new User({
-    username:req.body.username,
-    password:req.body.password
-  })
+router.post('/',addUser)
 
-  newUser.save()
-  .then(response=>{
-    res.json({
-      message:'OK',
-      data:response
-    })
-  }).catch(err=>{
-    res.json(err)
-  })
-  // res.json({
-  //   id:1
-  // })
-})
 
 
 

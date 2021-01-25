@@ -9,10 +9,10 @@ const mongoose = require('mongoose')
 
 // mongodb connection
 mongoose.connect('mongodb://localhost:27017/webdev',{
-  useCreateIndex:true,
   useNewUrlParser:true,
   useUnifiedTopology:true,
-  useFindAndModify:false
+  useFindAndModify:false,
+  useCreateIndex:true
 })
 
 // event listener when app connected to db
