@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const {getUsers,addUser,getUserById,updateUserById,deleteUserById} = require('./controllers/userController')
+const {getUsers,addUser,getUserById,updateUserById,deleteUserById,authController,loginController} = require('./controllers/userController')
 
 
 /* GET users listing. */
@@ -20,5 +20,9 @@ router.put('/:id',updateUserById)
 // delete user
 router.delete('/:id',deleteUserById)
 
+// login auth
+router.get('/auth/login',authController)
+
+router.post('/auth/login',loginController)
 
 module.exports = router;
