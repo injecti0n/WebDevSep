@@ -105,14 +105,14 @@ const loginController = (req, res) => {
             })
         }
         getUser = user;
-        return bcrypt.compare(req.body.password, user.password)
+        return bcrypt.compare(req.body.password, user.password) // bcrypt compared plaintext pass and protected(crypted pass)
     }).then(response => {
         if (!response) {
             return res.status(401).json({
                 message: 'Auth fail!'
             })
         }
-        if (getUser !== null && getUser !== undefined) {
+        if (getUser !== null && getUser !== undefined) { // if user record exist generate token and print them in response.
             let token = jwt.sign({
                 username: getUser.username,
                 userId: getUser._id
