@@ -14,6 +14,26 @@ const getUsers = (req, res) => {
     })
 }
 
+// get user by id
+
+const getUserById = (req, res) => {
+    let userID = req.params.id
+    User.findById(userID, (err, response) => {
+        if (err) {
+            res.json({
+                err: err
+            })
+        } else {
+            res.json({
+                message: 'OK',
+                data: response
+            })
+        }
+    })
+}
+
+
+
 // post new user controller
 const addUser = (req, res) => {
     bcrypt.hash(req.body.password, 10)
@@ -33,8 +53,39 @@ const addUser = (req, res) => {
                 })
         })
 
+}
 
+
+const updateUserById = (req, res) => {
+    let userID = req.params.id
+    User.findOneAndUpdate({ _id: userID }, req.body, (err, response) => {
+        if (err) {
+            res.json({ err: err })
+        } else {
+            res.json({
+                message: "ok",
+                data: response
+            })
+        }
+    })
 
 }
 
-module.exports = { getUsers, addUser }
+
+const deleteUserById = (req,res)=>{
+    let userID = req.params.id
+    User.findByIdAndDelete({_id:userID},(err,response)=>{
+        if(err){
+            res.json({
+                err:err
+            })
+        }else{
+            res.json({
+                message:'deleted!!!!',
+                data:response
+            })
+        }
+    })
+}
+
+module.exports = { getUsers, getUserById, addUser, updateUserById,deleteUserById }
