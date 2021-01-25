@@ -116,7 +116,7 @@ const loginController = (req, res) => {
             let token = jwt.sign({
                 username: getUser.username,
                 userId: getUser._id
-            }, 'secret-pass', {
+            }, 'YDRwNx6J8Baymk8cgrxs6xLE7ne9n2xF2cBJ3NGSWd', {
                 expiresIn: '1h'
             });
             res.status(200).json({

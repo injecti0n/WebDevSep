@@ -1,23 +1,21 @@
 var express = require('express');
 var router = express.Router();
-
+const checkToken = require('../middlewares/checkToken')
 const {getUsers,addUser,getUserById,updateUserById,deleteUserById,authController,loginController} = require('./controllers/userController')
 
-
 /* GET users listing. */
-router.get('/', getUsers);
+router.get('/',checkToken,getUsers);
 
 // post routers
 router.post('/',addUser)
 
-router.get('/:id',getUserById)
-
+router.get('/:id',checkToken,getUserById)
 
 // update user
-router.put('/:id',updateUserById)
+router.put('/:id',checkToken,updateUserById)
 
 // delete user
-router.delete('/:id',deleteUserById)
+router.delete('/:id',checkToken,deleteUserById)
 
 // login auth
 router.get('/auth/login',authController)
