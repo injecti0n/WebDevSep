@@ -1,0 +1,24 @@
+Node.JS Events EventEmitter
+Node.JS Express
+
+https://jsonplaceholder.typicode.com/posts/
+
+# packages you need
+yargs
+http
+fs
+
+
+node getPost.js --id 10
+
+https://jsonplaceholder.typicode.com/posts/10 
+
+console.log(singlePost)
+res.write()
+
+1- make command-line app interface with yargs module
+2- make async function to get single Post
+3- save response data in local folder
+4- Print the response data in browser with http module
+
+id is required

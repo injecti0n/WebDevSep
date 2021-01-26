@@ -1,0 +1,11 @@
+img#player {
+    width: 18%;
+    position: absolute;
+    left: 0px;
+    bottom: 90px;
+}
+
+img#background {
+    position: relative;
+    z-index: -999;
+}
