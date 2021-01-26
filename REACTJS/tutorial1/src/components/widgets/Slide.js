@@ -14,4 +14,4 @@ function Slide() {
     )
 }
 
-export default Slide
+export default Slide;
