@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Input, Label,Button } from 'reactstrap'
 import Counter from './Counter'
 // import ChildComponent from './ChildComponent'
 
@@ -16,21 +17,33 @@ class App extends Component {
             nestedObj: {
                 test: [1, 2]
             },
-            myFunction: () => console.log('test')
+            myFunction: () => console.log('test'),
+            comment: ''
+
 
         }
     }
 
-    
-    TestFunction = ()=>{
+
+
+    TestFunction = () => {
         console.log('hello world')
         this.setState({
-            username:'Oguz',
-            age:this.state.age+1
-           
+            username: 'Oguz',
+            age: this.state.age + 1
+
         })
         console.log(this.state.username)
     }
+
+
+    inputHandler = (e) => {
+        // console.log(e.target.value)
+        this.setState({
+            comment: e.target.value
+        })
+    }
+
 
 
     render() {
@@ -41,7 +54,23 @@ class App extends Component {
                 {console.log(this.state)}
                 {this.state.myFunction()}
                 <a href="#" onClick={this.TestFunction} >Click me!</a> */}
-                <Counter projectname="Counter Project v1.0"/>
+                <Counter projectname="Counter Project v1.0" />
+                <hr />
+                <Input type="text" className="bg-primary text-white" onChange={this.inputHandler} />
+
+                <p className="lead">
+                    {this.state.comment}
+                </p>
+
+                <Label>fullname: </Label>
+                <Input type="text" className="bg-primary text-white" onChange={this.inputHandler} />
+                <Label>age: </Label>
+                <Input type="text" className="bg-primary text-white" onChange={this.inputHandler} />
+                <Label>email: </Label>
+                <Input type="text" className="bg-primary text-white" onChange={this.inputHandler} />
+                <Button>Send Message</Button>
+
+
             </div>
         )
     }
