@@ -10,6 +10,9 @@ export default class App extends Component {
 
 
   FakePerson = () => {
+    // document.getelementByid('howmany')
+    // input element
+    // function param
     let people = this.state.people;
 
     for (let index = 0; index < 10; index++) {
@@ -34,6 +37,7 @@ export default class App extends Component {
     return (
       <div>
         <FakePersonGenerator fakepeople={this.state.people}/>
+       
         <Button onClick={this.FakePerson}>Generate Fake Data</Button>
         {/* {console.log(this.state.people)} */}
       </div>
