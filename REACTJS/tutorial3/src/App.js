@@ -33,12 +33,17 @@ export default class App extends Component {
     })
   }
 
+  
+
   render() {
+    const inputStyle={
+      width:'10%'
+    }
     return (
       <div>
         <FakePersonGenerator fakepeople={this.state.people}/>
-        <Input type="number" id="howmany" />
-        <Button onClick={()=>this.FakePerson(20)}>Generate Fake Data</Button>
+        <Input type="number" id="howmany" placeholder="20" style={inputStyle} />
+        <Button onClick={()=>this.FakePerson(document.getElementById('howmany').value)}>Generate Fake Data</Button>
         {/* {console.log(this.state.people)} */}
       </div>
     )
