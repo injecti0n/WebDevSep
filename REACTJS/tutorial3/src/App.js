@@ -33,9 +33,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <FakePersonGenerator />
+        <FakePersonGenerator fakepeople={this.state.people}/>
         <Button onClick={this.FakePerson}>Generate Fake Data</Button>
-        {console.log(this.state.people)}
+        {/* {console.log(this.state.people)} */}
       </div>
     )
   }

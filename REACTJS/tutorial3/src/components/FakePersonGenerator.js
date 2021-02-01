@@ -12,6 +12,7 @@ class FakePersonGenerator extends Component {
             <div>
                 <Container>
                     <h1>Hello</h1>
+                    {console.log(this.props.fakepeople)}
                 </Container>
             </div>
         )
