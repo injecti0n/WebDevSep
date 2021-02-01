@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FakePersonGenerator from './components/FakePersonGenerator'
 import Faker from 'faker'
-import { Button } from 'reactstrap'
+import { Button, Input } from 'reactstrap'
 export default class App extends Component {
   state = {
     people: [],
@@ -9,13 +9,13 @@ export default class App extends Component {
   }
 
 
-  FakePerson = () => {
+  FakePerson = (howmany) => { // howmany = 19
     // document.getelementByid('howmany')
     // input element
     // function param
     let people = this.state.people;
 
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < howmany; index++) {
       let name = Faker.name.findName()
       let username = Faker.internet.userName()
       let avatar = Faker.internet.avatar();
@@ -37,8 +37,8 @@ export default class App extends Component {
     return (
       <div>
         <FakePersonGenerator fakepeople={this.state.people}/>
-       
-        <Button onClick={this.FakePerson}>Generate Fake Data</Button>
+        <Input type="number" id="howmany" />
+        <Button onClick={()=>this.FakePerson(20)}>Generate Fake Data</Button>
         {/* {console.log(this.state.people)} */}
       </div>
     )
