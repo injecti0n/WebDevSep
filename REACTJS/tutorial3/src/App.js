@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import FakePersonGenerator from './components/FakePersonGenerator'
+// import FakePersonGenerator from './components/FakePersonGenerator'
 import Faker from 'faker'
-import { Button, Input } from 'reactstrap'
+import { Col, Container, Row } from 'reactstrap'
+// import Weather from './components/Weather'
+import Cryptocurrency from './components/Cryptocurrency'
+import Mikail from './components/Mikail'
+import Welcome from './components/Welcome'
 export default class App extends Component {
   state = {
     people: [],
@@ -33,18 +37,28 @@ export default class App extends Component {
     })
   }
 
-  
+
 
   render() {
-    const inputStyle={
-      width:'10%'
-    }
+    // const inputStyle = {
+    //   width: '10%'
+    // }
     return (
       <div>
-        <FakePersonGenerator fakepeople={this.state.people}/>
+        {/* <FakePersonGenerator fakepeople={this.state.people}/>
         <Input type="number" id="howmany" placeholder="20" style={inputStyle} />
         <Button onClick={()=>this.FakePerson(document.getElementById('howmany').value)}>Generate Fake Data</Button>
-        {/* {console.log(this.state.people)} */}
+        <hr/>
+        <Weather/> */}
+        <Container fluid={true} >
+          <Row>
+            <Col md={12}>
+              <Welcome />
+              <Cryptocurrency />
+              <Mikail/>
+            </Col>
+          </Row>
+        </Container>
       </div>
     )
   }
