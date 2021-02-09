@@ -1,0 +1,20 @@
+$bgColor: white;
+// variable
+$logoSize: 10wv;
+
+// nested sass
+.App{
+  background-color: $bgColor;
+  .App-header{
+    .App-logo{
+      width: $logoSize
+    }
+  }
+}
+
+
+@for $j from 1 through 5{
+  .post-#{$j}{
+    font-size: 16px * $j;
+  }
+}
